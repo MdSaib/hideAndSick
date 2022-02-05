@@ -229,9 +229,9 @@ form.addEventListener('submit', (postIt) => {
 
 form.addEventListener('input', () => {
   const jsonForm = {
-    name: document.querySelector('.form-control1').value,
-    email: document.querySelector('.form-control2').value,
-    textArea: document.querySelector('.form-control3').value
+    name: document.querySelector('.form-control1'),
+    email: document.querySelector('.form-control2'),
+    textArea: document.querySelector('.form-control3')
   };
 
   localStorage.setItem('contactWay', JSON.stringify(jsonForm));
