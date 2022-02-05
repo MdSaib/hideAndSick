@@ -229,15 +229,15 @@ form.addEventListener('submit', (postIt) => {
 
 form.addEventListener('input', () => {
   const jsonForm = {
-    name: document.querySelector('.form-control1').value,
-    email: document.querySelector('.form-control2').value,
-    textArea: document.querySelector('.form-control3').value
+    name: document.querySelector('.form-control1'),
+    email: document.querySelector('.form-control2'),
+    textArea: document.querySelector('.form-control3')
   };
 
   localStorage.setItem('contactWay', JSON.stringify(jsonForm));
 });
 
 const nonJsonForm = JSON.parse(localStorage.getItem('contactWay'));
-document.querySelector('.form-control1').value = nonJsonForm.name;
-document.querySelector('.form-control2').value = nonJsonForm.email;
-document.querySelector('.form-control3').value = nonJsonForm.textArea;
+document.querySelector('.form-control1') = nonJsonForm.name;
+document.querySelector('.form-control2') = nonJsonForm.email;
+document.querySelector('.form-control3') = nonJsonForm.textArea;
